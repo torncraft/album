@@ -6,9 +6,8 @@ addEventListener("load", function() {
     var on_meta_load = function(meta) {
 
         // Get authors and max/min date
-        var keys = Object.keys(meta);
-        keys.sort(function(a, b) {
-            return meta[a]['time'] > meta[b]['time'];
+        var keys = Object.keys(meta).sort(function(a, b) {
+            return meta[a]['time'] - meta[b]['time'];
         });
 
         keys.forEach(function(key) {
