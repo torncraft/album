@@ -29,7 +29,7 @@ addEventListener("load", function() {
             var author = document.createElement('p');
             author.innerHTML = "Taken by " + imageMeta['author'];
             var caption = document.createElement('p');
-            caption.innerHTML = imageMeta['caption'];
+            caption.innerHTML = "<i>"+imageMeta['caption']+"</i>";
 
             imageDiv.appendChild(image);
             imageDiv.appendChild(date);
