@@ -6,18 +6,13 @@ addEventListener("load", function() {
     var on_meta_load = function(meta) {
 
         // Get authors and max/min date
-        var authors = new Set();
-        var minTime = (new Date()).getTime();
-        var maxTime = 0;
-        Object.keys(meta).forEach(function(key) {
+        var keys = Object.keys(meta);
+        keys.sort(function(a, b) {
+            return meta[a]['time'] > meta[b]['time'];
+        });
+
+        keys.forEach(function(key) {
             var imageMeta = meta[key];
-            authors.add(imageMeta['author']);
-            if (meta['time'] > maxTime) {
-                maxTime = meta['time'];
-            }
-            if (meta['time'] < minTime) {
-                minTime = meta['time'];
-            }
 
             var imageDiv = document.createElement('div');
             imageDiv.setAttribute('class', 'box');
