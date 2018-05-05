@@ -2,7 +2,7 @@
 Slideshow of images from Torncraft
 
 All this does is runs `script.js` inside your browser, which
-loads the metadata in `meta.yml` and puts the images inside the
+loads the metadata in `meta.json` and puts the images inside the
 html document on load.
 
 ## Adding new images
