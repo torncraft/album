@@ -17,6 +17,7 @@ addEventListener("load", function() {
             imageDiv.setAttribute('class', 'box');
             var imageLink = document.createElement('a');
             imageLink.setAttribute('href', 'images/' + key);
+            imageLink.setAttribute('class', 'image');
             var image = document.createElement('img');
             image.setAttribute('src', 'images/' + key);
             image.setAttribute('alt', imageMeta['caption']);
