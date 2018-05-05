@@ -15,6 +15,8 @@ addEventListener("load", function() {
 
             var imageDiv = document.createElement('div');
             imageDiv.setAttribute('class', 'box');
+            var imageLink = document.createElement('a');
+            imageLink.setAttribute('href', 'images/' + key);
             var image = document.createElement('img');
             image.setAttribute('src', 'images/' + key);
             image.setAttribute('alt', imageMeta['caption']);
@@ -25,14 +27,14 @@ addEventListener("load", function() {
             var caption = document.createElement('p');
             caption.innerHTML = "<i>"+imageMeta['caption']+"</i>";
 
-            imageDiv.appendChild(image);
+            imageLink.appendChild(image);
+            imageDiv.appendChild(imageLink);
             imageDiv.appendChild(date);
             imageDiv.appendChild(author);
             imageDiv.appendChild(caption);
 
             div.appendChild(imageDiv);
         });
-        // div.innerHTML = Array.from(authors);
     };
 
     var load_json = function() {
