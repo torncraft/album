@@ -20,7 +20,7 @@ in a web server. If you have Python 3, you can simply navigate to
 the repo dir and do:
 
 ```bash
-python -m http.client
+python -m http.server
 ```
 
 You won't see the CSS since that's stored in the
